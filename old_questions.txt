@@ -1,0 +1,5 @@
+What is the derivative of $f(x) = x^2$ ?; $f'(x) = 2x$
+What is the integral of $sin(x)$?; $-cos(x) + C$
+   Front: Bohr radius ($ a_0 $) ; $\hbar$
+1. Front: Bohr radius (\( a_0 \)) ; Back: \( = 4\pi\frac{\hbar^2}{ e^2} \) (6.11)   Comment: Represents the average distance of the electron from the nucleus in a hydrogen atom.
+Front: Bohr radius (\( a_0 \)) ; Back: \( = 4\pi\frac{\hbar^2}{\varepsilon_0 e^2 m} = 5.3 \times 10^{-11} \, \mathrm{m} \) (6.11)  Comment: Represents the average distance of the electron from the nucleus in a hydrogen atom.

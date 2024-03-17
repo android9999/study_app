@@ -1,2 +1,5 @@
-What is the derivative of $f(x) = x^2$ ?; $f'(x) = 2x$
-What is the integral of $sin(x)$?; $-cos(x) + C$
+Front: Bohr radius (\( a_0 \)) ; Back: \( = 4\pi\frac{\hbar^2}{\varepsilon_0 e^2 m} = 5.3 \times 10^{-11} \, \mathrm{m} \) (6.11)  Comment: Represents the average distance of the electron from the nucleus in a hydrogen atom.
+Front: Rydberg energy (\( E_0 \)) ; Back: \( = \frac{e^2}{4m} \frac{32π^2\hbar^2}{ε_0^2} = 2.17 × 10^{-18} \, \text{J} = 13.6 \, \text{eV} \) (6.12)  Comment: Energy required to ionize a hydrogen atom from its ground state.
+Front: Wavelength (\( \frac{1}{\lambda} \)) ; Back: \( = \frac{E_0}{hc} \left( \frac{1}{n_f^2} - \frac{1}{n_i^2} \right) \) (6.13)  Comment: Relates the wavelength of emitted photons to initial and final quantum states in the hydrogen atom.
+Front: Total angular momentum squared (\( L^2 \)) ; Back: \( = l(l + 1)\hbar^2 \) (6.14)  Comment: Quantum mechanical operator representing the square of the total angular momentum of a particle.
+Front: Angular momentum along the z-axis (\( L_z \)) ; Back: \( = ml\hbar \) (6.15)  Comment: Quantum mechanical operator representing the z-component of angular momentum of a particle.

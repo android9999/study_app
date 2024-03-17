@@ -1,9 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
-import random
 from PIL import Image, ImageTk
-import matplotlib.pyplot as plt
-from pdf2image import convert_from_path
+from convert_latex_to_png import convert_latex_to_png
 
 class StudyApp:
     def __init__(self, root, questions_file):
@@ -78,25 +76,9 @@ class StudyApp:
         exit(0)
 
     def open_image(self, latex_str):
-        file_path = self.latex_to_png( repr(latex_str)[1:-1]   )
+        file_path =  convert_latex_to_png(latex_str)
         if file_path:
             self.display_image(file_path)
-
-    def latex_to_png(self, latex_str):
-        fig = plt.figure()
-        plt.axis("off")
-        plt.text(0.5, 0.5, latex_str, size=20, ha="center", va="center")
-
-        pdf_path = "result.pdf"
-        png_path = "result.png"
-
-        plt.savefig(pdf_path, format="pdf", bbox_inches="tight", pad_inches=0.4)
-        plt.close(fig)
-
-        images = convert_from_path(pdf_path)
-        images[0].save(png_path, "PNG")
-
-        return png_path
 
     def display_image(self, file_path):
         image = Image.open(file_path)
