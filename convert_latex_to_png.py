@@ -5,8 +5,9 @@ import re
 
 def sanitize_latex(latex_str):
     # Replace Unicode π with LaTeX \pi using regular expression
-    latex_str = re.sub(r'Ï€', r'\\pi', latex_str)
+    latex_str = re.sub(r'Ï€', r'\\pi ', latex_str)
     latex_str = re.sub(r'Îµ', r'\\epsilon', latex_str)
+    latex_str = re.sub(r'Ã—', r'\\times', latex_str)
 
     # Fix incorrect math mode usage
     latex_str = re.sub(r'(?<!\\)\$', r'\\$', latex_str)  # Escape $ not preceded by \
@@ -32,7 +33,7 @@ print(sanitized_latex)
 
 def convert_latex_to_png(raw_latex_str):
 
-    resolution_dpi = 150  # resolution in DPI
+    resolution_dpi = 300  # resolution in DPI
 
     # Define LaTeX code with white background and modified font size
     width_cm = 7.5  # width in centimeters

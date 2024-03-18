@@ -12,7 +12,7 @@ def main():
     while True:
         if not is_main_app_running():
             launch_main_app()
-        time.sleep(1 * 1)  # Check every 5 minutes
+        time.sleep(10 * 60)  # Check every 5 minutes
 
 if __name__ == "__main__":
     main()

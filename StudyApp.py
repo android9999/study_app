@@ -4,7 +4,7 @@ from PIL import Image, ImageTk
 from convert_latex_to_png import convert_latex_to_png
 
 class StudyApp:
-    def __init__(self, root, questions_file):
+    def __init__(self, root, questions_file, if_all_correct_answers):
         self.root = root
         self.root.title("Study App")
 
@@ -12,7 +12,7 @@ class StudyApp:
         self.current_question_index = -1
         self.correct_answers = 0
         self.incorrect_answers = 0
-
+        self.if_all_correct_answers = if_all_correct_answers
         self.show_answer_button = tk.Button(root, text="Show Answer", command=self.show_answer)
         self.show_answer_button.pack()
         self.show_answer_button["state"] = "disabled"
@@ -73,6 +73,8 @@ class StudyApp:
 
     def study_complete(self):
         messagebox.showinfo("Study Complete", f"Congratulations! You have completed all the questions.\nCorrect Answers: {self.correct_answers}\nIncorrect Answers: {self.incorrect_answers}")
+        if self.incorrect_answers == 0:
+            self.if_all_correct_answers()
         exit(0)
 
     def open_image(self, latex_str):
@@ -87,6 +89,6 @@ class StudyApp:
         self.image_label.photo = photo
 
 # Example usage
-root = tk.Tk()
-app = StudyApp(root, "questions.txt")
-root.mainloop()
+#root = tk.Tk()
+#app = StudyApp(root, "questions.txt")
+#root.mainloop()
