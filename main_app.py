@@ -4,7 +4,7 @@ from QuestionSelector import QuestionSelector
 
 def main():
 
-    number_Of_questions = 4
+    number_Of_questions = 30
 
     def if_all_correct_answers():
         selector.change_questions()
